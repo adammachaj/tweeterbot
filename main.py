@@ -12,15 +12,15 @@ try:
     api.verify_credentials()
     print("Authentication OK")
 
-    # api.update_status("Test tweet from Tweepy Python")
+    # print(api.friends_ids('sleepyadamm'))
 
-    # user = api.get_user("sleepyadamm")
-    # print("User details:")
-    # print(user.name)
-    # print(user.description)
-    # print(user.location)
+    j = 1
+    for i in api.friends_ids('sleepyadamm'):
+        print(i)
+        # print(j, "   ", i)
+        # j+=1
+        # api.destroy_frienship(i)
 
-    # ?? print(api.home_timeline("sleepyadamm"))
 
 except:
     print("Error during authentication")
